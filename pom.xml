@@ -8,6 +8,7 @@
   <packaging>jar</packaging>
 
   <name>przyrodnicze</name>
+ 
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -22,4 +23,19 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>pl.edu.pk.projekt.przyrodnicze.PanelGlowny</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
