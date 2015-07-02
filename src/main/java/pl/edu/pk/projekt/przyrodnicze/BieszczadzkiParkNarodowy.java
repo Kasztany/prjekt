@@ -1,12 +1,10 @@
 package pl.edu.pk.projekt.przyrodnicze;
 
-import java.io.IOException;
+
 
 public class BieszczadzkiParkNarodowy implements ParkNarodowyInterface {
 	
 		private ParkNarodowy park;
-		private ReadFile file;
-		private String text;
 		public BieszczadzkiParkNarodowy(){
 			park = new ParkNarodowy();
 		}
@@ -27,10 +25,12 @@ public class BieszczadzkiParkNarodowy implements ParkNarodowyInterface {
 			park.setSlonceDeszcz(true);
 		}
 
-		public void setOpis() throws IOException {
-			file = new ReadFile();
-			text = file.readFile("src/main/resources/bieszczadzki.txt");
-			park.setOpis(text);
+		public void setOpis() {
+
+			park.setOpis("Park narodowy utworzony w 1973 roku położony w Bieszczadach Zachodnich o łącznej powierzchni 292,02 km2."
+					+ "W parku wyróżniono dwa piętra roślinno-klimatyczne: regiel dolny i połoniny."
+					+ "Blisko 80% obszaru BPN zajmują naturalne lasy liściaste. Park posiada największy wskaźnik obszarów objętych ochroną spośród wszystkich parków narodowych w Polsce."
+					+ "Na terenie BPN istnieje kilkanaście ścieżek przyrodniczo-historycznych, które w większości prowadzą wzdłuż istniejących szlaków pieszych.");
 		}
 		
 		public void setMiejsce(){

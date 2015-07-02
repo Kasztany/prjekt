@@ -1,11 +1,9 @@
 package pl.edu.pk.projekt.przyrodnicze;
 
-import java.io.IOException;
 
 public class TatrzanskiParkNarodowy implements ParkNarodowyInterface{
 	private ParkNarodowy park;
-	private ReadFile file;
-	private String text;
+
 	public TatrzanskiParkNarodowy(){
 		park = new ParkNarodowy();
 	}
@@ -26,10 +24,11 @@ public class TatrzanskiParkNarodowy implements ParkNarodowyInterface{
 		park.setSlonceDeszcz(true);
 	}
 
-	public void setOpis() throws IOException {
-		file = new ReadFile();
-		text = file.readFile("src/main/resources/tatrzanski.txt");
-		park.setOpis(text);
+	public void setOpis() {
+		park.setOpis("Jeden z 23 parków narodowych na terenie Polski. Utworzony z dniem 1 stycznia 1955 roku o łącznej powierzchni 211,64 km2. "
+				+ "TPN obejmuje całe polskie Tatry oraz niewielkie części Pogórza Bukowińskiego i Rowu Podtatrzańskiego. "
+				+ "Najwyższym punktem jest szczyt Rysów (2499 m), najniższym dolina Porońca (ok. 773 m). Tatry dzielą się na Tatry Wysokie, Tatry Zachodnie i Tatry Bielskie (te ostatnie tylko na Słowacji). "
+				+ "U podnóża Tatr Polskich rozłożone jest Zakopane, natomiast u podnóża Tatr Słowackich istnieje kilka miejscowości z zapleczem turystycznym jak np. Tatrzańska Łomnica i Poprad.");
 	}
 	
 	public void setMiejsce(){

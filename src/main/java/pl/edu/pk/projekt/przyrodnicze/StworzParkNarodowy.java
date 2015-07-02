@@ -1,6 +1,5 @@
 package pl.edu.pk.projekt.przyrodnicze;
 
-import java.io.IOException;
 
 public class StworzParkNarodowy {
 	
@@ -10,7 +9,7 @@ public class StworzParkNarodowy {
 		this.builder = builder;
 	}
 	
-	public ParkNarodowy getParkNarodowy() throws IOException{
+	public ParkNarodowy getParkNarodowy(){
 		builder.setNazwa();
 		builder.setFlora();
 		builder.setFauna();

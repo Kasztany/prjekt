@@ -1,6 +1,6 @@
 package pl.edu.pk.projekt.przyrodnicze;
 
-import java.io.IOException;
+
 
 public interface ParkNarodowyInterface {
 		
@@ -8,7 +8,7 @@ public interface ParkNarodowyInterface {
 		public void setFlora();
 		public void setFauna();
 		public void setSlonceDeszcz();
-		public void setOpis() throws IOException;
+		public void setOpis();
 		public void setMiejsce();
 		public ParkNarodowy getParkNarodowy();
 }

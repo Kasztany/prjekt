@@ -66,12 +66,7 @@ public class PanelGlowny extends JFrame{
 		JButton button2 = new JButton("Informacje o Parkach");
 		button2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				InformacjePanel informacje = null;
-				try {
-					informacje = new InformacjePanel();
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+				InformacjePanel informacje = new InformacjePanel();
 				setVisible(false);
 				informacje.setVisible(true);
 				}
