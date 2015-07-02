@@ -19,8 +19,6 @@ import javax.swing.border.EmptyBorder;
 public class InformacjePanel extends PanelGlowny {
 
 	private JPanel panel;
-	private ArrayList<String> listaName;
-	private ArrayList<List> listaL;
 	public InformacjePanel() throws IOException {
 		initialize();
 	}
@@ -112,13 +110,12 @@ public class InformacjePanel extends PanelGlowny {
 		list3.add("Opis:");
 		list3.add(b.getOpis());
 		
-		listaL = InformacjeWszystkie.getList();
-		listaName = InformacjeWszystkie.getName();
-		listaL.toArray();
-		listaName.toArray();
-		
-		for (int i=0;i<InformacjeWszystkie.getSize();i++){
-			tabbedPane.addTab((String) listaName.toArray()[i], (Component) listaL.toArray()[i]);
+
+		NameRepository nameRepository = new NameRepository();
+		ListRepository listRepository = new ListRepository();
+		for(Iterator iter = nameRepository.getIterator(), iter1 = listRepository.getIterator(); iter.hasNext();){
+			tabbedPane.addTab((String) iter.next(),(Component) iter1.next());
 		}
+
 	}
 }
