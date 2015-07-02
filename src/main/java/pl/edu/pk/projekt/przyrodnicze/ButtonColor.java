@@ -11,9 +11,9 @@ public class ButtonColor extends Dekorator {
 		this.button=button;
 		
 	}
-	public void makeButton() {
-		JButton jbutton = new JButton ();
-		jbutton.setBackground(Color.green);
+	public void makeButton(Color clr) {
+		JButton jbutton = new JButton (clr);
+		jbutton.setBackground(clr);
 	}
 	
 }
